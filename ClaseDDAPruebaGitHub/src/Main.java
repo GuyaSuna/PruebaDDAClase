@@ -1,6 +1,10 @@
+import PaquetePersonas.Persona;
+
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Hola soy Nahuel");
+        Persona persona  = new Persona(100, "Nahuel");
+
+        System.out.println(persona.toString());
     }
 }
