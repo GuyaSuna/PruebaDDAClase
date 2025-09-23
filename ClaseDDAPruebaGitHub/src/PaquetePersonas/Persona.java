@@ -1,6 +1,6 @@
 package PaquetePersonas;
 
-public class Persona {
+public abstract class Persona {
 
     private static int contador = 0;
     private int id;
@@ -12,35 +12,33 @@ public class Persona {
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
-
     public int getVida() {
         return vida;
     }
-
     public void setVida(int vida) {
         this.vida = vida;
     }
-
     public String getNombre() {
         return nombre;
     }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     @Override
     public String toString() {
-        return "Persona{" +
-                "id=" + id +
-                ", vida=" + vida +
-                ", nombre='" + nombre + '\'' +
-                '}';
+        return
+                "id: " + id +
+                ", vida: " + vida +
+                ", nombre: " + nombre;
     }
+
+    public abstract int atacar();
+
+    public abstract int recibirAtaque(int daño);
 
     public Persona(int vida , String nombre){
         this.id = ++contador;
