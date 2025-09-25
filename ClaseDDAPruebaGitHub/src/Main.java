@@ -1,3 +1,4 @@
+import ItemsPaquete.Item;
 import PaquetePersonas.Guerrero;
 import PaquetePersonas.Persona;
 import PaquetePersonas.Mago;
@@ -6,18 +7,19 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Persona> personas = new ArrayList<>();
-        ArrayList<Mago> magos = new ArrayList<>();
+
+
 
 
         Mago mago = new Mago(200 , "Nahuel" , 40);
         Guerrero guerrero = new Guerrero(400 , "Guerrero1" , 20);
 
-       
-        personas.add(mago);
-        personas.add(guerrero);
+        Item baston = new Item(80 , "Baston");
+        Item espada = new Item(50);
 
-        magos.add(mago);
+        System.out.println(baston);
+        System.out.println(espada);
+
 
 
         boolean ganador = false;
