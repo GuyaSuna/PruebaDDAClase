@@ -2,25 +2,26 @@ package ItemsPaquete;
 
 public class Bastones extends Item {
 
-     private int poderMagico;
+     private int largo;
 
 
-    public int getPoderMagico() {
-        return poderMagico;
+
+    public int getLargo() {
+        return largo;
     }
 
-    public void setPoderMagico(int poderMagico) {
-        this.poderMagico = poderMagico;
+    public void setLargo(int largo) {
+        this.largo = largo;
     }
 
     @Override
     public String toString() {
-        return super.toString() + " Poder Magico: " + this.poderMagico;
+        return super.toString() + " Poder Magico: " + this.largo;
     }
 
-    public Bastones(int daño , String nombre , int poderMagico){
+    public Bastones(int daño , String nombre , int largo){
         super(daño,nombre);
-        this.poderMagico = poderMagico;
+        this.largo = largo;
     }
 
 

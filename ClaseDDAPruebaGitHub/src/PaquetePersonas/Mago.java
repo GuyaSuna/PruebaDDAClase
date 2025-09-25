@@ -24,11 +24,15 @@ public class Mago extends Persona {
 
     @Override
     public String toString() {
-        return "Mago: " + super.toString() + ", Ap: " + this.ap;
+        return "Mago: " + super.toString() + ", Ap: " + this.ap +" Baston: "+ baston.toString();
     }
 
     public int atacar() {
-        return this.ap;
+        if(this.baston != null){
+            return this.ap + baston.getDaño();
+        }else {
+            return this.ap;
+        }
     }
 
     public int recibirAtaque(int daño){
