@@ -4,7 +4,6 @@ public abstract class Persona {
 
     private static int contador = 0;
     private int id;
-
     private int vida;
     private String nombre;
 
@@ -45,7 +44,6 @@ public abstract class Persona {
         this.vida = vida;
         this.nombre = nombre;
     }
-
 
 
 }
