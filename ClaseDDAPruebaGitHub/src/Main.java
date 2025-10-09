@@ -1,6 +1,7 @@
 import ItemsPaquete.Bastones;
 import ItemsPaquete.Espadas;
 import ItemsPaquete.Item;
+import PaqueteAtletas.Atleta;
 import PaquetePersonas.Guerrero;
 import PaquetePersonas.Persona;
 import PaquetePersonas.Mago;
@@ -8,8 +9,6 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-
-    
 
     }
 }
