@@ -26,6 +26,8 @@ public class Atleta implements InterfazAtleta{
     public String toString(){
         return "Atleta: " + this.nombre;
     }
+
+
     public Atleta(String nombre){
         this.id = contador++;
         this.nombre = nombre;

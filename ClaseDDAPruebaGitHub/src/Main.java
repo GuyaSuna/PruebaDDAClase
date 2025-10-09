@@ -1,6 +1,7 @@
 import ItemsPaquete.Bastones;
 import ItemsPaquete.Espadas;
 import ItemsPaquete.Item;
+import PaqueteAtletas.Atleta;
 import PaquetePersonas.Guerrero;
 import PaquetePersonas.Persona;
 import PaquetePersonas.Mago;
@@ -26,7 +27,8 @@ public class Main {
 
             switch (opcion){
                 case 1:
-                    System.out.println("Paola");
+                    Atleta atleta = new Atleta("Juan");
+                    System.out.println("Paola " + atleta );
                     break;
                 case 2:
                     Auto auto = new Auto("Fiat" , "1" ,2003, 50.00,"Azul");
