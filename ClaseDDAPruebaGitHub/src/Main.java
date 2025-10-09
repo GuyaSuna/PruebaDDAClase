@@ -4,6 +4,8 @@ import ItemsPaquete.Item;
 import PaquetePersonas.Guerrero;
 import PaquetePersonas.Persona;
 import PaquetePersonas.Mago;
+import vehiculos.Auto;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -27,7 +29,9 @@ public class Main {
                     System.out.println("Paola");
                     break;
                 case 2:
-                    System.out.println("Sophie");
+                    Auto auto = new Auto("Fiat" , "1" ,2003, 50.00,"Azul");
+
+                    System.out.println("Sophie " + auto);
                     break;
                 case -1:
                     System.out.println("Saliendo");
