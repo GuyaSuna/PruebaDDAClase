@@ -58,4 +58,9 @@ public class Auto {
     public void mostrarInfo() {
         System.out.println(marca + " " + modelo + " (" + anio + ") - " + color + " - $" + precio);
     }
+
+    @Override
+    public String toString() {
+        return marca + " " + modelo + " (" + anio + ") - " + color + " - $" + precio;
+    }
 }
