@@ -31,7 +31,7 @@ public class Main {
                 case 2:
                     Auto auto = new Auto("Fiat" , "1" ,2003, 50.00,"Azul");
 
-                    System.out.println("Sophie" + auto);
+                    System.out.println("Sophie " + auto);
                     break;
                 case -1:
                     System.out.println("Saliendo");
