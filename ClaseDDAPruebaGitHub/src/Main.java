@@ -1,3 +1,4 @@
+import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
@@ -29,8 +30,18 @@ public class Main {
                     System.out.println("Ingresa una fecha dd/mm/yyyy hh/mm");
 
                     String fechaString = sc.nextLine();
-                    LocalDateTime fecha = LocalDateTime.parse(fechaString,formato);
+                    try {
+                        LocalDateTime fecha = LocalDateTime.parse(fechaString, formato);
 
+                        if(fecha.isBefore(LocalDateTime.now())) {
+                            System.out.println("Error: la fecha no puede no ser hoy");
+                        } else {
+                            System.out.println("Partida agendada correctamente para: " + fecha.format(formato));
+                        }
+
+                    } catch (DateTimeParseException e) {
+                        System.out.println("Error: formato de fecha inváñido. Usa dd/mm/yyyy hh:mm");
+                    }
 
                     break;
                 case -1:
