@@ -1,8 +1,12 @@
 import java.util.Scanner;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+
      int opcion = 0;
 
         System.out.println("Menu de opciones");
@@ -11,6 +15,7 @@ public class Main {
 
             System.out.println("Opcion 1: Prueba de Natacion");
             System.out.println("Opcion 2: Preuba de Auto");
+            System.out.println("Opcion 3: Agenda una partida");
 
             opcion = sc.nextInt();
             sc.nextLine();
@@ -21,9 +26,16 @@ public class Main {
                     System.out.println("Paola ");
                     break;
                 case 2:
-
-
                     System.out.println("Sophie ");
+                    break;
+                case 3:
+                    System.out.println("Agenda una partida");
+                    System.out.println("Ingresa una fecha dd/mm/yyyy hh/mm");
+
+                    String fechaString = sc.nextLine();
+                    LocalDateTime fecha = LocalDateTime.parse(fechaString,formato);
+
+
                     break;
                 case -1:
                     System.out.println("Saliendo");
