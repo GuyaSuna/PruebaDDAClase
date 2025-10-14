@@ -1,3 +1,5 @@
+import Cartas.Deck;
+
 import java.util.Scanner;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
@@ -22,7 +24,7 @@ public class Main {
             switch (opcion){
                 case 1:
                     System.out.println("Juego de truco ");
-
+                    System.out.println(Deck.generarMazo());
                     break;
                 case 2:
                     System.out.println("Agenda una partida");
