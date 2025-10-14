@@ -32,7 +32,7 @@ public class Main {
                     String fechaString = sc.nextLine();
                     try {
                         LocalDateTime fecha = LocalDateTime.parse(fechaString, formato);
-
+                        
                         if(fecha.isBefore(LocalDateTime.now())) {
                             System.out.println("Error: la fecha no puede no ser hoy");
                         } else {
