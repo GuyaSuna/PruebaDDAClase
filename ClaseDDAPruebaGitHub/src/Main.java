@@ -13,22 +13,18 @@ public class Main {
 
         while (opcion != -1){
 
-            System.out.println("Opcion 1: Prueba de Natacion");
-            System.out.println("Opcion 2: Preuba de Auto");
-            System.out.println("Opcion 3: Agenda una partida");
+            System.out.println("Opcion 1: Jugar Partida");
+            System.out.println("Opcion 2: Agenda una partida");
 
             opcion = sc.nextInt();
             sc.nextLine();
 
             switch (opcion){
                 case 1:
+                    System.out.println("Juego de truco ");
 
-                    System.out.println("Paola ");
                     break;
                 case 2:
-                    System.out.println("Sophie ");
-                    break;
-                case 3:
                     System.out.println("Agenda una partida");
                     System.out.println("Ingresa una fecha dd/mm/yyyy hh/mm");
 
