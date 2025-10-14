@@ -3,11 +3,11 @@ package Players;
 import Cartas.Carta;
 
 import javax.smartcardio.Card;
-import java.util.List;
+import java.util.ArrayList;
 
 public class Player {
     String nombre;
-    List<Carta> mano;
+    ArrayList<Carta> mano;
     int victoriasManos;
 
     public String getNombre() {
@@ -18,11 +18,11 @@ public class Player {
         this.nombre = nombre;
     }
 
-    public List<Carta> getMano() {
+    public ArrayList<Carta> getMano() {
         return mano;
     }
 
-    public void setMano(List<Carta> mano) {
+    public void setMano(ArrayList<Carta> mano) {
         this.mano = mano;
     }
 
@@ -43,7 +43,7 @@ public class Player {
                 '}';
     }
 
-    public Player(String nombre, List<Carta> mano, int victoriasManos){
+    public Player(String nombre, ArrayList<Carta> mano, int victoriasManos){
         this.nombre = nombre;
         this.mano = mano;
         this.victoriasManos = victoriasManos;
