@@ -1,5 +1,8 @@
+import Cartas.Carta;
 import Cartas.Deck;
-
+import java.util.Collections;
+import java.time.format.DateTimeParseException;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
@@ -24,15 +27,38 @@ public class Main {
             switch (opcion){
                 case 1:
                     System.out.println("Juego de truco ");
-                    System.out.println(Deck.generarMazo());
+                    ArrayList<Carta> listaCartas = Deck.generarMazo();
+                    Collections.shuffle(listaCartas);
+
+                    System.out.println("Primera mano");
+                    System.out.println(listaCartas.get(0));
+                    System.out.println(listaCartas.get(2));
+                    System.out.println(listaCartas.get(4));
+
+                    System.out.println("Segunda mano");
+                    System.out.println(listaCartas.get(1));
+                    System.out.println(listaCartas.get(3));
+                    System.out.println(listaCartas.get(5));
+
+
                     break;
                 case 2:
                     System.out.println("Agenda una partida");
                     System.out.println("Ingresa una fecha dd/mm/yyyy hh/mm");
 
                     String fechaString = sc.nextLine();
-                    LocalDateTime fecha = LocalDateTime.parse(fechaString,formato);
+                    try {
+                        LocalDateTime fecha = LocalDateTime.parse(fechaString, formato);
 
+                        if(fecha.isBefore(LocalDateTime.now())) {
+                            System.out.println("Error: la fecha no puede no ser hoy");
+                        } else {
+                            System.out.println("Partida agendada correctamente para: " + fecha.format(formato));
+                        }
+
+                    } catch (DateTimeParseException e) {
+                        System.out.println("Error: formato de fecha inváñido. Usa dd/mm/yyyy hh:mm");
+                    }
 
                     break;
                 case -1:
